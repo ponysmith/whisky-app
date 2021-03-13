@@ -1,0 +1,12 @@
+@import '~@workday/canvas-kit-css/index.scss';
+
+* {
+    box-sizing: border-box;
+}
+html, 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+    background-color: #fff;
+}
