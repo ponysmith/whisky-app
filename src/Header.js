@@ -1,15 +1,20 @@
 import React from 'react'
-import { PageHeader } from '@workday/canvas-kit-react';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 
 import './header.scss';
 
 export const Header = () => {
   return (
-    <div id="header-container">
-      <header id="header-content">
-        <PageHeader title="Wonderful World of Whisky" />
-      </header>
-    </div>
+    <AppBar position="fixed">
+      <div id="header-container">
+        <header id="header-content">
+          <Typography variant="h6">
+            World of Whisky
+          </Typography>
+        </header>
+      </div>
+    </AppBar>
   )
 }
 

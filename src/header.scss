@@ -3,11 +3,10 @@
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  height: 84px;
-  background-image: linear-gradient(to bottom right,#005cb9,#0875e1);
 }
 #header-content {
   flex: 0 0 100%;
   max-width: 960px;
   display: block;
+  padding: 15px 0;
 }

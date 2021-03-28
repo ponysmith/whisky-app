@@ -1,0 +1,30 @@
+.filters-form {
+  margin-top: 2rem;
+  padding: 0 60px;
+  
+  .filter {
+    margin: 1rem 0 0;
+  }
+  .filter-label {
+    font-size: .9rem;
+    font-weight: 500;
+    color: #494949;
+    margin-right: 10px;
+  }
+  .filter-field {
+    margin: .5rem 0 0;
+  }
+
+  input[type=text], 
+  input[type=number], 
+  textarea {
+    padding: 10px;
+    border: 1px solid #494949;
+    border-radius: 2px;
+  }
+  label {
+    font-size: .9rem;
+    font-weight: 500;
+    color: #494949;
+  }
+}

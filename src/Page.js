@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import Select, {SelectOption} from '@workday/canvas-kit-react-select';
-import FormField from '@workday/canvas-kit-react-form-field';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-import WhiskyImg from './images/whisky.jpg'
-import "./page.scss"
+import Whiskies from './views/whiskies/Main';
+import "./page.scss";
 
 export const Page = () => {
 
@@ -11,25 +10,14 @@ export const Page = () => {
   return (
     <div id="page-container">
       <div id="page-content">
-        <div id="aside-container">
-          <aside id="aside-content">
-            <img src={WhiskyImg} alt="Glass of whisky" width="100%" />
-            <form className="whisky-form">
-              <FormField label="Select a Whisky" inputId="whisky-select">
-                <Select name="whisky">
-                  <SelectOption value="whisky1" label="Whisky 1" />
-                  <SelectOption value="whisky2" label="Whisky 2" />
-                  <SelectOption value="whisky3" label="Whisky 3" />
-                  <SelectOption value="whisky4" label="Whisky 4" />
-                </Select>
-              </FormField>
-            </form>
-          </aside>
-        </div>
-        <div id="main-container">
-          <main id="main-content">
-          </main>
-        </div>
+        <Router>
+          <Switch>
+            <Route path="/whiskies" component={Whiskies} />
+            <Route exact path="/">
+              <Redirect to="/whiskies" />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </div>
   )
