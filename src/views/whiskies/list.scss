@@ -1,0 +1,27 @@
+.whisky-list {
+  border-top: 4px solid #ddd;
+}
+.whisky-item {
+  border-bottom: 1px solid #ddd;
+}
+.whisky-link {
+  display: block;
+  padding: 10px 10px;
+  color: #777;
+  text-decoration: none;
+  font-size: .9rem;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  .whisky-rating {
+    display: inline-block;
+    margin-right: 7px;
+    padding: 1px 5px;
+    vertical-align: middle;
+    background-color: #555;
+    color: #ddd;
+    border-radius: 3px;
+  }
+}

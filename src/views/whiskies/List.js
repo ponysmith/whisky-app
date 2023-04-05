@@ -5,6 +5,7 @@ import Filters from '../../components/whiskies/Filters';
 import WhiskyImg from '../../images/whisky.png';
 
 import { getWhiskies } from '../../helpers/api';
+import "./list.scss";
 
 export const List = ( props ) => {
   const [_whiskies, setWhiskies] = useState( { data: [], loading: true, error: false })
@@ -31,10 +32,13 @@ export const List = ( props ) => {
   const renderWhiskyList = () => {
     return _whiskies.data.map( (whisky, i) => {
       return (
-        <div key={`whisky-${i}`}>
-          <Link to={`/whiskies/${whisky.id}`}>{whisky.name}</Link>
+        <div key={`whisky-${i}`} className="whisky-item">
+          <Link className="whisky-link" to={`/whiskies/${whisky.id}`}>
+            <span className="whisky-rating">{whisky.rating}</span>
+            {whisky.name}
+          </Link>
         </div>
-      )
+      )  
     })
   }
 
@@ -50,6 +54,7 @@ export const List = ( props ) => {
         <main id="main-content">
           <h1>Whiskies</h1>
 
+          <div className="whisky-list">
           { _whiskies.loading && <CircularProgress /> }
         
           { _whiskies.data.length > 99 &&
@@ -57,6 +62,7 @@ export const List = ( props ) => {
           }
           
           { _whiskies.data.length > 0 && renderWhiskyList() }
+          </div>
         </main>
       </div>
     </React.Fragment>
